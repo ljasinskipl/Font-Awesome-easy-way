@@ -3,14 +3,16 @@ Contributors: ljasinskipl
 Tags: font awesome, css, editor
 Requires at least: 3.0
 Tested up to: 3.8
-Stable tag: 0.1.2
+Stable tag: 0.1.3
 
 Easily insert font awesome 4.0 icons as shortcodes. Coming soon editor plugin and customization options
 
 == Licence ==
 
 Font Files are licenced under SIL OFL 1.1: http://scripts.sil.org/OFL
+
 Font Awesome css code is licenced under MIT licence: http://opensource.org/licenses/mit-license.html
+
 Rest of plugin code is licenced under GPL2 Licence
 
 == Installation ==
@@ -21,6 +23,8 @@ Just insert [faicon name="iconname"] to insert an icon full list of icons: http
 
 == Changelog ==
 
+= 0.1.3 =
+* This deployment script has to start working eventualy
 = 0.1.2 =
 * Another test. Deployment script
 
