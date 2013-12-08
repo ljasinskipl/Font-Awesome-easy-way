@@ -3,14 +3,14 @@
 Plugin Name:       Font Awsome the easy way
 Plugin URI:        http://www.ljasinski.pl/category/komputery/wordpress-komputery/pluginy/font-awesome-easy-way/
 Description:       @TODO
-Version:           0.1.1
+Version:           0.1.2
 Author:            Łukasz Jasiński
 Author URI:        <studio@ljasinski.pl>
 Text Domain:       font-awesome-easy-way
 License:           GPL-2.0+
 License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
 Domain Path:       /languages
-GitHub Plugin URI: https://github.com/<owner>/<repo>
+GitHub Plugin URI: https://github.com/ljasinskipl/Font-Awesome-easy-way
 */
 
 /*
