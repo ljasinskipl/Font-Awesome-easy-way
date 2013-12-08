@@ -26,7 +26,7 @@ class LJPL_FontAwesome {
 	 * @since   0.1.0
 	 * @var     string
 	 */
-	const VERSION = '0.1.0';
+	const VERSION = '0.2.0';
 
 	/**
 	 * Version of Font Awesome files
@@ -75,7 +75,13 @@ class LJPL_FontAwesome {
 		add_action('wp_enqueue_scripts', array($this, 'enqueue_styles'));
 
 		// FontAwesome shortcode
+
 		add_shortcode('faicon', array($this, 'shortcode_faicon'));
+		add_shortcode('faul', array( $this, 'shortcode_faul'));
+		add_shortcode('fali', array( $this, 'shortcode_fali'));
+		add_shortcode('falist', array( $this, 'shortcode_falist' ));
+		
+	remove_filter( 'the_content', 'wpautop' );
 	}
 
 	/**
@@ -234,9 +240,17 @@ class LJPL_FontAwesome {
 	 * @since    0.1.0
 	 */
 	public function enqueue_styles() {
-		wp_enqueue_style($this -> plugin_slug . '-plugin-styles', plugins_url('assets/css/font-awesome.min.css', __FILE__), array(), FA_VERSION);
+		wp_enqueue_style($this -> plugin_slug . '-plugin-styles', plugins_url('assets/css/font-awesome.min.css', __FILE__), array(), self::FA_VERSION);
 	}
 
+	/**
+	 * Insert an icon using a shortcode
+	 * @param $atts array shortcode attributes
+	 * @param $content string 
+	 *
+	 * @since     0.1.0
+	 * @return    string content after filtering
+	 */
 	public function shortcode_faicon ( $atts, $content = NULL ) {
 		extract( shortcode_atts( array(
 			'name' => '',
@@ -245,8 +259,62 @@ class LJPL_FontAwesome {
 		), $atts ) );		
 		if( 0 !==strpos( $name, 'fa-') )
 			$name = 'fa-' . $name;
+		if( $title )
+			$title = 'title="' . $title . '"';
 		
-		return '<i class="fa ' . $name . '"></i>';
+		return '<i class="fa ' . $name . '" ' . $title . '></i>';
+	}
+	
+	/**
+	 * Insert unordered list with FA icons. Use with [fali] [/fali] inside
+	 * @param $atts array shortcode attributes
+	 * @param $content string 
+	 *
+	 * @since     0.2.0
+	 * @return    string content after filtering
+	 */	
+	public function shortcode_faul( $atts, $content = NULL ) {
+		extract ( shortcode_atts( array(
+		), $atts ) );
+		$content = str_replace( array( '<p></p>' ), '', $content );
+		return '<ul class="fa-ul">' . do_shortcode( $content ) . '</ul>';
 	}
 
+	/**
+	 * Insert list element with FA icon bullet. Use inside [faul] [/faul]
+	 * @param $atts array shortcode attributes
+	 * @param $content string 
+	 *
+	 * @since     0.2.0
+	 * @return    string content after filtering
+	 */	
+	public function shortcode_fali( $atts, $content = NULL ) {
+		extract ( shortcode_atts( array(
+			'icon' => 'fa-angle-double-right'
+		), $atts ) );
+		if( 0 !==strpos( $icon, 'fa-') )
+			$icon = 'fa-' . $icon;			
+		return '<li><i class="fa-li fa ' . $icon . '"></i>' . $content . '</li>';	
+	}
+
+	/**
+	 * Change normal unordered list into Font Awesome icon bulleted
+	 * @param $atts array shortcode attributes
+	 * @param $content string 
+	 *
+	 * @since     0.2.0
+	 * @return    string content after filtering
+	 */	
+	public function shortcode_falist ($atts, $content = NULL ) {
+		extract ( shortcode_atts( array(
+			'icon' => 'fa-angle-double-right'
+		), $atts ) );
+		if( 0 !==strpos( $icon, 'fa-') )
+			$icon = 'fa-' . $icon;				
+		
+		$find = array( '<ul>', '<li>', '<p></p>' );
+		$replace = array( '<ul class="fa-ul">', '<li><i class="fa-li fa ' . $icon . '"></i>', '');
+		
+		return str_replace( $find, $replace, $content );
+	}
 }
