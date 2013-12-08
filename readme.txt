@@ -3,7 +3,7 @@ Contributors: ljasinskipl
 Tags: font awesome, css, editor
 Requires at least: 3.0
 Tested up to: 3.8
-Stable tag: 0.1.3
+Stable tag: 0.1.4
 
 Easily insert font awesome 4.0 icons as shortcodes. Coming soon editor plugin and customization options
 
@@ -23,8 +23,12 @@ Just insert [faicon name="iconname"] to insert an icon full list of icons: http
 
 == Changelog ==
 
+= 0.1.4 =
+* Just git tagging left
+
 = 0.1.3 =
 * This deployment script has to start working eventualy
+
 = 0.1.2 =
 * Another test. Deployment script
 

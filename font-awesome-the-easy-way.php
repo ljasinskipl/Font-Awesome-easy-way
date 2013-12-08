@@ -3,7 +3,7 @@
 Plugin Name:       Font Awsome the easy way
 Plugin URI:        http://www.ljasinski.pl/category/komputery/wordpress-komputery/pluginy/font-awesome-easy-way/
 Description:       @TODO
-Version:           0.1.3
+Version:           0.1.4
 Author:            Łukasz Jasiński
 Author URI:        <studio@ljasinski.pl>
 Text Domain:       font-awesome-easy-way
