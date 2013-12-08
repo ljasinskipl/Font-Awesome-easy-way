@@ -3,7 +3,7 @@ Contributors: ljasinskipl
 Tags: font awesome, css, editor
 Requires at least: 3.0
 Tested up to: 3.8
-Stable tag: 0.1.4
+Stable tag: 0.1.4b
 
 Easily insert font awesome 4.0 icons as shortcodes. Coming soon editor plugin and customization options
 
