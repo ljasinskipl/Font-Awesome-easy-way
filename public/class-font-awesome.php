@@ -240,6 +240,8 @@ class LJPL_FontAwesome {
 	public function shortcode_faicon ( $atts, $content = NULL ) {
 		extract( shortcode_atts( array(
 			'name' => '',
+			'size' => '',
+			'title' => '',
 		), $atts ) );		
 		if( 0 !==strpos( $name, 'fa-') )
 			$name = 'fa-' . $name;
