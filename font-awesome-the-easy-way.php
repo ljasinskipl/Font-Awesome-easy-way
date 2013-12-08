@@ -1,20 +1,5 @@
 <?php
-/**
- * The WordPress Plugin Boilerplate.
- *
- * A foundation off of which to build well-documented WordPress plugins that
- * also follow WordPress Coding Standards and PHP best practices.
- *
- * @package   Font-Awesome-Easy-Way
- * @author    Łukasz Jasiński <studio@ljasinski.pl>
- * @license   GPL-2.0+
- * @link      http://www.ljasinski.pl/category/komputery/wordpress-komputery/pluginy/font-awesome-easy-way/
- * @copyright 2013 Studio Multimedialne ljasinski.pl
- * @todo      other css classes
- * @todo	  editor plugin
- * @todo      additional icons
- *
- * @wordpress-plugin
+/*
  * Plugin Name:       Font Awsome the easy way
  * Plugin URI:        http://www.ljasinski.pl/category/komputery/wordpress-komputery/pluginy/font-awesome-easy-way/
  * Description:       @TODO
@@ -45,7 +30,21 @@
 
 */
 
-
+/**
+ * The WordPress Plugin Boilerplate.
+ *
+ * A foundation off of which to build well-documented WordPress plugins that
+ * also follow WordPress Coding Standards and PHP best practices.
+ *
+ * @package   Font-Awesome-Easy-Way
+ * @author    Łukasz Jasiński <studio@ljasinski.pl>
+ * @license   GPL-2.0+
+ * @link      http://www.ljasinski.pl/category/komputery/wordpress-komputery/pluginy/font-awesome-easy-way/
+ * @copyright 2013 Studio Multimedialne ljasinski.pl
+ * @todo      other css classes
+ * @todo	  editor plugin
+ * @todo      additional icons
+ *
 // If this file is called directly, abort.
 if (!defined('WPINC')) {
 	die ;
